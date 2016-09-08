@@ -63,3 +63,11 @@ if __name__ == '__main__':
     building = director.get_building()
     
     print building
+
+    director.builder = FlatBuilder()
+    
+    director.construct_building()
+    
+    building = director.get_building()
+    
+    print building
