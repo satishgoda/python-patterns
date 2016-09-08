@@ -40,3 +40,15 @@ class FlatBuilder(Builder):
     
     def build_size(self):
         self.building.size = "Small"
+
+class Director(object):
+    def __init__(self):
+        self.builder = None
+    
+    def construct_building(self):
+        self.builder.new_building()
+        self.builder.build_floor()
+        self.builder.build_size()
+    
+    def get_building(self):
+        return self.builder.building
