@@ -52,3 +52,14 @@ class Director(object):
     
     def get_building(self):
         return self.builder.building
+
+if __name__ == '__main__':
+    director = Director()
+    
+    director.builder = HouseBuilder()
+    
+    director.construct_building()
+    
+    building = director.get_building()
+    
+    print building
