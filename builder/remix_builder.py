@@ -22,3 +22,12 @@ class Builder(object):
     
     def build_size(self):
         raise NotImplementedError
+
+class HouseBuilder(Builder):
+    type = "House"
+    
+    def build_floor(self):
+        self.building.floor = "One"
+    
+    def build_size(self):
+        self.building.size = "Big"
