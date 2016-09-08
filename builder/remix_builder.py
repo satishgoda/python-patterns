@@ -31,3 +31,12 @@ class HouseBuilder(Builder):
     
     def build_size(self):
         self.building.size = "Big"
+
+class FlatBuilder(Builder):
+    type = "Flat"
+    
+    def build_floor(self):
+        self.building.floor = "Three"
+    
+    def build_size(self):
+        self.building.size = "Small"
