@@ -126,3 +126,12 @@ cmd = commandqueue.undo()
 cmd.undo()
 ctx.scene.items
 ctx.item
+
+commandqueue.undo()
+
+commandqueue.redo().redo()
+ctx.item
+ctx.scene.items
+
+commandqueue.redo().redo()
+ctx.item
